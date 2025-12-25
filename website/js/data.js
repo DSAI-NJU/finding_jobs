@@ -155,9 +155,9 @@ export const analysisData = {
             title: "3. 技能解码",
             subtitle: "从文本中挖掘高薪密码",
             description: "利用 NLP 技术，我们从海量 JD 中提取了高薪核心词汇，并构建了「高薪模板」。通过计算相似度，我们量化了技能的含金量。",
-            keyFindings: ["高薪岗位的 JD 中，硬技能（Python、算法、架构）出现频率显著更高", "低薪岗位更多强调软技能（沟通、吃苦耐劳）", "与高薪模板的相似度与实际薪资呈强正相关 (r > 0.6)"],
+            keyFindings: ["高薪岗位的 JD 中，硬技能（Python、数学）出现频率显著更高", "低薪岗位更多强调软技能（沟通、吃苦耐劳）", "与高薪模板的相似度与实际薪资呈强正相关 (r > 0.6)"],
             images: [
-                { src: "./data/picture/boss岗位技能词云与统计.png", title: "岗位核心技能词云", source: "BOSS直聘", explanation: "词云展示了 JD 中出现频率最高的技能关键词。字体越大表示出现频率越高，沟通、团队、营销等词传统占据核心位置。" },
+                { src: "./data/picture/boss岗位技能词云与统计.png", title: "岗位核心技能词云", source: "BOSS直聘", explanation: "词云展示了 JD 中出现频率最高的技能关键词。字体越大表示出现频率越高，沟通、团队、营销等词占据核心位置。" },
                 { src: "./data/picture/qcwy福利关键词词云与统计.png", title: "福利关键词分析", source: "前程无忧", explanation: "企业福利词云显示，五险一金、带薪年假是基本配置，而股票期权、弹性工作等则是高薪企业的差异化竞争点。" },
                 { src: "./data/picture/boss高低薪岗位核心词汇对比.png", title: "高薪 vs 低薪岗位核心词汇对比 (原始)", source: "BOSS直聘", explanation: "未经 AI 筛选的原始对比图。" },
                 { src: "./data/picture/boss高低薪岗位核心词汇对比AI筛选.png", title: "高薪 vs 低薪岗位核心词汇对比 (Qwen AI筛选)", source: "BOSS直聘", explanation: "该图对比展示了经 AI 清洗去除福利、套话后的核心词汇：高薪岗位（薪资前10%）更侧重数学、Python等硬技能，而低薪岗位更侧重沟通、执行等软技能。" },
@@ -183,9 +183,8 @@ export const analysisData = {
             description: "通过多元回归模型，我们剥离了各因素的独立贡献，结果显示，BOSS直聘与前程无忧的模型结果高度互证。",
             keyFindings: ["技能相似度的回归系数（58.0）远超学历（2.8）和经验（1.7）", "控制其他变量后，学历每升一级，薪资增加约 2.8K", "模型 R² 约为 0.42，说明这三个变量解释了 42% 的薪资变异"],
             images: [
-                { src: "./data/picture/boss薪资影响因素相关性热力图.png", title: "变量相关性热力图", source: "BOSS直聘", explanation: "热力图展示了薪资与各自变量之间的相关系数。颜色深浅代表相关性强弱，显示技能相似度与薪资的相关性最强。" },
-                { src: "./data/picture/qcwy薪资相关性热力图.png", title: "变量相关性热力图", source: "前程无忧", explanation: "前程无忧数据的相关性矩阵与 BOSS 高度一致，验证了结论的跨平台稳健性。" },
-                { src: "./data/picture/qcwy薪资关键技能相关性.png", title: "关键技能相关性", source: "前程无忧", explanation: "分析显示具体技能（如 Python、SQL）与薪资之间存在显著的正相关关系。" },
+                { src: "./data/picture/qcwy薪资相关性热力图.png", title: "变量相关性热力图", source: "前程无忧", explanation: "热力图展示了薪资与各自变量之间的相关系数。颜色深浅代表相关性强弱。" },
+                { src: "./data/picture/qcwy薪资关键技能相关性.png", title: "关键技能相关性", source: "前程无忧", explanation: "分析显示具体技能与薪资之间存在的相关关系。" },
                 { src: "./data/picture/boss薪资影响因素堆积分析.png", title: "各因素边际贡献堆积图", source: "BOSS直聘", explanation: "堆积图直观展示了从基准薪资出发，学历、经验、技能相似度各自贡献了多少薪资增量。" },
                 { src: "./data/picture/qcwy薪资影响因素堆积分析.png", title: "各因素边际贡献堆积图", source: "前程无忧", explanation: "两平台的堆积图结构相似，都显示技能相似度是最大的边际贡献因子。" },
                 { src: "./data/picture/boss薪资影响因素重要性排序.png", title: "影响因素重要性排序", source: "BOSS直聘", explanation: "图表对回归系数进行了排序，技能相似度以绝对优势领先，表明其对薪资波动的影响最大。" },
