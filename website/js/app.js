@@ -59,6 +59,9 @@ const app = createApp({
                 list.push({ type: 'conclusion', content: data.value.conclusion });
             }
 
+            // 8. 致谢页
+            list.push({ type: 'thanks', content: { title: '感谢聆听', subtitle: '欢迎提问' } });
+
             return list;
         });
 

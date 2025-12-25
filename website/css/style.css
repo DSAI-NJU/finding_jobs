@@ -1634,6 +1634,31 @@ body.in-presentation #floating-bg {
     font-size: 2.5rem;
     margin-bottom: 40px;
     color: var(--text-primary);
+
+/* 致谢页 */
+.slide-thanks {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.slide-thanks .slide-main-title {
+    font-size: 14rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, var(--text-primary), var(--primary-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.slide-thanks .slide-subtitle {
+    font-size: 6rem;
+    color: var(--accent-color);
+}
 }
 
 .slide-conclusion-grid {
