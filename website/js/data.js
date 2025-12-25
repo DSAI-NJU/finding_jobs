@@ -122,12 +122,12 @@ export const analysisData = {
                 { src: "./data/picture/zlzp城市平均薪资对比.png", title: "主要城市平均薪资对比", source: "智联招聘", explanation: "柱状图直观对比了各主要城市的平均薪资水平，北京、深圳、上海位列前三，高于新一线城市。" },
                 { src: "./data/picture/zlzp城市学历要求构成.png", title: "各城市学历要求构成", source: "智联招聘", explanation: "堆叠柱状图展示了不同城市对学历的要求差异。本科是学历门槛，一线城市对硕士需求更高。" },
                 { src: "./data/picture/zlzp岗位类型薪酬排名.png", title: "不同岗位类型薪酬排名", source: "智联招聘", explanation: "数据显示，投行、基金、量化行业薪资更高（和前面热力图对应）。" },
-                { src: "./data/picture/zlzp薪资不平等洛伦兹曲线.png", title: "薪资不平等洛伦兹曲线", source: "智联招聘", explanation: "洛伦兹曲线越偏离45度线，说明薪资不平等程度越高。图中显示金融类岗位薪资不平等更突出，数据分析相对均衡。" }
+                { src: "./data/picture/zlzp薪资不平等洛伦兹曲线.png", title: "薪资不平等洛伦兹曲线", source: "智联招聘", explanation: "洛伦兹曲线越偏离45度线，说明薪资不平等程度越高。图中显示财务类不平等程度最高。" }
             ],
             interactiveCharts: [
                 { src: "./data/treemap_market_of_zlzp.html", title: "市场结构树图 (交互)", source: "智联招聘", explanation: "交互式树图展示了各城市、岗位类型的市场结构占比，可点击查看细分数据。" }
             ],
-            insight: "一线城市依然是高薪聚集地，但薪资不平等现象（洛伦兹曲线）在不同城市间存在显著差异。技术类岗位的薪酬上限极高，拉大了整体差距。"
+            insight: "北上广深仍是高薪核心，新一线城市在追赶。高薪更多集中在投行/基金/量化及部分技术岗，抬高了薪资上限；洛伦兹曲线显示不平等在岗位类型上更突出，财务类偏高。"
         },
         {
             id: "salary-basics",
@@ -148,7 +148,7 @@ export const analysisData = {
                 { src: "./data/sankey_chart_of_boss.html", title: "人才职业发展路径桑基图 (交互)", source: "BOSS直聘", explanation: "桑基图展示了从学历到经验再到薪资分层的人才流动路径，宽度代表人数占比。" },
                 { src: "./data/salary_3d_bar_of_zlzp.html", title: "薪资3D柱状图 (交互)", source: "智联招聘", explanation: "三维视角展示不同城市、不同岗位的薪资对比，可旋转查看。" }
             ],
-            insight: "学历决定下限，经验决定上限。无论是新兴的BOSS还是传统的51job，这一规律都坚不可摧。大公司（规模效应）通常能提供更具竞争力的薪资包。"
+            insight: "学历抬高起薪，硕士相对本科有明显溢价（约 40%）。经验带来跃升，3-10 年增长最明显；千人以上公司整体给出的薪资更高。"
         },
         {
             id: "skill-decoding",
@@ -157,7 +157,7 @@ export const analysisData = {
             description: "利用 NLP 技术，我们从海量 JD 中提取了高薪核心词汇，并构建了「高薪模板」。通过计算相似度，我们量化了技能的含金量。",
             keyFindings: ["高薪岗位的 JD 中，硬技能（Python、算法、架构）出现频率显著更高", "低薪岗位更多强调软技能（沟通、吃苦耐劳）", "与高薪模板的相似度与实际薪资呈强正相关 (r > 0.6)"],
             images: [
-                { src: "./data/picture/boss岗位技能词云与统计.png", title: "岗位核心技能词云", source: "BOSS直聘", explanation: "词云展示了 JD 中出现频率最高的技能关键词。字体越大表示出现频率越高，Python、数据分析、机器学习等词汇占据核心位置。" },
+                { src: "./data/picture/boss岗位技能词云与统计.png", title: "岗位核心技能词云", source: "BOSS直聘", explanation: "词云展示了 JD 中出现频率最高的技能关键词。字体越大表示出现频率越高，沟通、团队、营销等词传统占据核心位置。" },
                 { src: "./data/picture/qcwy福利关键词词云与统计.png", title: "福利关键词分析", source: "前程无忧", explanation: "企业福利词云显示，五险一金、带薪年假是基本配置，而股票期权、弹性工作等则是高薪企业的差异化竞争点。" },
                 { src: "./data/picture/boss高低薪岗位核心词汇对比.png", title: "高薪 vs 低薪岗位核心词汇对比 (原始)", source: "BOSS直聘", explanation: "未经 AI 筛选的原始对比图。" },
                 { src: "./data/picture/boss高低薪岗位核心词汇对比AI筛选.png", title: "高薪 vs 低薪岗位核心词汇对比 (Qwen AI筛选)", source: "BOSS直聘", explanation: "该图对比展示了经 AI 清洗去除福利、套话后的核心词汇：高薪岗位（薪资前10%）更侧重数学、Python等硬技能，而低薪岗位更侧重沟通、执行等软技能。" },
@@ -174,7 +174,7 @@ export const analysisData = {
                 { src: "./data/diamond_chart_fixed_of_boss.html", title: "高薪技能词云雷达 (交互)", source: "BOSS直聘", explanation: "交互式钻石形词云展示高薪岗位的硬核技能关键词，词越大表示TF-IDF权重越高，含金量越高。" },
                 { src: "./data/scatter_regression_of_boss.html", title: "技能含金量与薪资关系 (交互)", source: "BOSS直聘", explanation: "交互式散点图展示每个岗位的JD含金量与薪资关系，红线为回归趋势线，可悬停查看具体岗位信息。" }
             ],
-            insight: "与高薪模板的语义相似度越高，实际薪资越高。「算法」、「架构」等硬核技能是提升相似度（进而提升薪资）的关键。这一结论在两个平台中均得到验证。"
+            insight: "高薪 JD 更集中在硬技能（Python、算法、架构），低薪更偏软技能。JD 越接近“高薪原型”，薪资越高；这一关系在两平台都成立。"
         },
         {
             id: "regression-attribution",
@@ -191,7 +191,7 @@ export const analysisData = {
                 { src: "./data/picture/boss薪资影响因素重要性排序.png", title: "影响因素重要性排序", source: "BOSS直聘", explanation: "图表对回归系数进行了排序，技能相似度以绝对优势领先，表明其对薪资波动的影响最大。" },
                 { src: "./data/picture/qcwy薪资影响因素对比.png", title: "影响因素对比", source: "前程无忧", explanation: "前程无忧数据同样显示，相比于传统因素，技能相似度的重要性更为突出。" }
             ],
-            insight: "在控制了学历和经验后，「技能描述相似度」依然对薪资有显著的正向贡献，且其边际效应在两个平台中均得到了验证。技能是学历之外最重要的溢价来源。"
+            insight: "在同一模型里，技能相似度的影响最大，远超学历和经验。学历每升一级约带来 2.8K 增量；三项因素合计解释约 42% 的薪资差异。"
         },
         {
             id: "heterogeneity-robustness",
@@ -214,7 +214,7 @@ export const analysisData = {
             interactiveCharts: [
                 { src: "./data/radar_profile_of_boss.html", title: "高薪vs低薪人才画像对比 (交互)", source: "BOSS直聘", explanation: "雷达图直观对比高薪组（Top 25%）和低薪组（Bottom 25%）在学历、经验、技能含金量三个维度的差异。高薪组在所有维度上都明显领先。" }
             ],
-            insight: "高学历不仅带来高起薪，还能放大技能的价值（调节效应）。同时，安慰剂测试证明了我们的发现并非统计巧合，具有极高的稳健性。"
+            insight: "学历会放大技能溢价。技能回报在一线/新一线更突出，但两平台在城市分组上结论不完全一致；PSM 匹配和安慰剂检验表明整体结果可靠。"
         }
     ],
     conclusion: {
