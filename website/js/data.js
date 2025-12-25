@@ -70,7 +70,7 @@ export const analysisData = {
     regression: {
         title: "核心发现：薪资决定方程",
         subtitle: "OLS 多元线性回归结果",
-        formula: "Salary = 8.1 + 2.8×Edu + 1.7×Exp + 58.0×Skill_Match",
+        formula: "回归方程：Salary = 8.1 + 2.8×Edu + 1.7×Exp + 58.0×Skill_Match",
         interpretation: "职位描述相似度（Skill Match）是影响薪资的最关键因素",
         rSquared: 0.42,
         nObs: 15000,

@@ -9,27 +9,27 @@
 </head>
 <body>
     <div id="app">
-        <!-- 五列蛇形背景动画 -->
+        <!-- 五列蛇形背景动画：每列使用全量图片并重复，避免断裂 -->
         <div id="floating-bg">
             <div class="bg-col col-up">
-                <img v-for="(img, index) in allImages.slice(0, Math.ceil(allImages.length/5))" :key="'c1-'+index" :src="img.src" alt="">
-                <img v-for="(img, index) in allImages.slice(0, Math.ceil(allImages.length/5))" :key="'c1-d-'+index" :src="img.src" alt="">
+                <img v-for="(img, index) in allImages" :key="'c1-'+index" :src="img.src" alt="">
+                <img v-for="(img, index) in allImages" :key="'c1-d-'+index" :src="img.src" alt="">
             </div>
             <div class="bg-col col-down">
-                <img v-for="(img, index) in allImages.slice(Math.ceil(allImages.length/5), Math.ceil(allImages.length*2/5))" :key="'c2-'+index" :src="img.src" alt="">
-                <img v-for="(img, index) in allImages.slice(Math.ceil(allImages.length/5), Math.ceil(allImages.length*2/5))" :key="'c2-d-'+index" :src="img.src" alt="">
+                <img v-for="(img, index) in allImages" :key="'c2-'+index" :src="img.src" alt="">
+                <img v-for="(img, index) in allImages" :key="'c2-d-'+index" :src="img.src" alt="">
             </div>
             <div class="bg-col col-up">
-                <img v-for="(img, index) in allImages.slice(Math.ceil(allImages.length*2/5), Math.ceil(allImages.length*3/5))" :key="'c3-'+index" :src="img.src" alt="">
-                <img v-for="(img, index) in allImages.slice(Math.ceil(allImages.length*2/5), Math.ceil(allImages.length*3/5))" :key="'c3-d-'+index" :src="img.src" alt="">
+                <img v-for="(img, index) in allImages" :key="'c3-'+index" :src="img.src" alt="">
+                <img v-for="(img, index) in allImages" :key="'c3-d-'+index" :src="img.src" alt="">
             </div>
             <div class="bg-col col-down">
-                <img v-for="(img, index) in allImages.slice(Math.ceil(allImages.length*3/5), Math.ceil(allImages.length*4/5))" :key="'c4-'+index" :src="img.src" alt="">
-                <img v-for="(img, index) in allImages.slice(Math.ceil(allImages.length*3/5), Math.ceil(allImages.length*4/5))" :key="'c4-d-'+index" :src="img.src" alt="">
+                <img v-for="(img, index) in allImages" :key="'c4-'+index" :src="img.src" alt="">
+                <img v-for="(img, index) in allImages" :key="'c4-d-'+index" :src="img.src" alt="">
             </div>
             <div class="bg-col col-up">
-                <img v-for="(img, index) in allImages.slice(Math.ceil(allImages.length*4/5))" :key="'c5-'+index" :src="img.src" alt="">
-                <img v-for="(img, index) in allImages.slice(Math.ceil(allImages.length*4/5))" :key="'c5-d-'+index" :src="img.src" alt="">
+                <img v-for="(img, index) in allImages" :key="'c5-'+index" :src="img.src" alt="">
+                <img v-for="(img, index) in allImages" :key="'c5-d-'+index" :src="img.src" alt="">
             </div>
         </div>
 

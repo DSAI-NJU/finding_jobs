@@ -28,17 +28,15 @@ const app = createApp({
                 list.push({ type: 'transform', content: data.value.dataTransform });
             }
             
-            // 4. 回归模型核心发现
-            if (data.value.regression) {
-                list.push({ type: 'regression', content: data.value.regression });
-            }
-            
-
-
-            // 6. 故事章节
+            // 4. 故事章节（含回归页并入第4章）
             data.value.story.forEach(chapter => {
                 // 章节介绍页
                 list.push({ type: 'chapter', content: chapter });
+                
+                // 如果是归因分析章节，插入回归页
+                if (chapter.id === 'regression-attribution' && data.value.regression) {
+                    list.push({ type: 'regression', content: data.value.regression });
+                }
                 
                 // 该章节的图片页
                 chapter.images.forEach(img => {
