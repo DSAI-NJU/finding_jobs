@@ -183,6 +183,7 @@ export const analysisData = {
             description: "通过多元回归模型，我们剥离了各因素的独立贡献，结果显示，BOSS直聘与前程无忧的模型结果高度互证。",
             keyFindings: ["技能相似度的回归系数（58.0）远超学历（2.8）和经验（1.7）", "控制其他变量后，学历每升一级，薪资增加约 2.8K", "模型 R² 约为 0.42，说明这三个变量解释了 42% 的薪资变异"],
             images: [
+                { src: "./data/picture/回归结果.png", title: "OLS 回归结果表", source: "BOSS直聘", explanation: "回归系数、显著性与模型诊断一览。" },
                 { src: "./data/picture/qcwy薪资相关性热力图.png", title: "变量相关性热力图", source: "前程无忧", explanation: "热力图展示了薪资与各自变量之间的相关系数。颜色深浅代表相关性强弱。" },
                 { src: "./data/picture/boss薪资影响因素堆积分析.png", title: "各因素边际贡献堆积图", source: "BOSS直聘", explanation: "堆积图直观展示了从基准薪资出发，学历、经验、技能相似度各自贡献了多少薪资增量。" },
                 { src: "./data/picture/qcwy薪资影响因素堆积分析.png", title: "各因素边际贡献堆积图", source: "前程无忧", explanation: "两平台的堆积图结构相似，都显示技能相似度是最大的边际贡献因子。" },
